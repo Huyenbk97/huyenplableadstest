@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "240d3c81-da87-4eea-81b3-cc26f78c0417",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 100,
+  "height": 100,
+  "platformSettings": {},
+  "subMetas": {
+    "Shipmini_00004": {
+      "ver": "1.0.4",
+      "uuid": "8c8d8277-10bc-4d90-b282-bb48112b45e6",
+      "rawTextureUuid": "240d3c81-da87-4eea-81b3-cc26f78c0417",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -2,
+      "offsetY": -1,
+      "trimX": 30,
+      "trimY": 2,
+      "width": 36,
+      "height": 98,
+      "rawWidth": 100,
+      "rawHeight": 100,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
