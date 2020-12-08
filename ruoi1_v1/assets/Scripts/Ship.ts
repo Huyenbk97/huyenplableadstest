@@ -18,6 +18,7 @@ export default class Ship extends cc.Component {
     // initBulletPosition2:cc.Node=null;
     // @property()
     @property(cc.Prefab)
+<<<<<<< HEAD
     shipBullet1: cc.Node = null;
     @property(cc.Prefab)
     shipBullet2: cc.Node = null;
@@ -31,6 +32,11 @@ export default class Ship extends cc.Component {
     @property
     bulletPool: number = 0;
 
+=======
+    shipBullet: cc.Node = null;
+    @property
+    bulletPool: number = 0;
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
     @property
     bullet1:number=1;
     @property
@@ -89,12 +95,17 @@ export default class Ship extends cc.Component {
     }
     createBullet() {
         if (this.popup.active==false&&this.bullet1==1 ) {
+<<<<<<< HEAD
         // ////ban thang 0''
+=======
+ 
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
         // ////
         let bullet = null;
         if (this.bulletPool.size() > 0) { // use size method to check if there're nodes available in the pool
         bullet = this.bulletPool.get();
         } else { // if not enough node in the pool, we call cc.instantiate to create node
+<<<<<<< HEAD
 
            bullet = cc.instantiate(this.shipBullet2);
         }
@@ -107,16 +118,22 @@ export default class Ship extends cc.Component {
         bullet = this.bulletPool.get();
         } else { // if not enough node in the pool, we call cc.instantiate to create node
 
+=======
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
            bullet = cc.instantiate(this.shipBullet);
         }
         bullet.parent = this.node;
         var pos = this.ship.getPosition();
         bullet.setPosition(cc.v2(pos.x+20,pos.y+this.ship.height/2-20))
+<<<<<<< HEAD
 
+=======
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
         let bullet = null;
         if (this.bulletPool.size() > 0) { // use size method to check if there're nodes available in the pool
         bullet = this.bulletPool.get();
         } else { // if not enough node in the pool, we call cc.instantiate to create node
+<<<<<<< HEAD
            bullet = cc.instantiate(this.shipBullet3);
         }
         bullet.parent = this.node;
@@ -141,10 +158,22 @@ export default class Ship extends cc.Component {
         bullet.parent = this.node;
         var pos = this.ship.getPosition();
         bullet.setPosition(cc.v2(pos.x+20,pos.y+this.ship.height/2+20))
+=======
            bullet = cc.instantiate(this.shipBullet);
         }
         bullet.parent = this.node;
         var pos = this.ship.getPosition();
+        bullet.setPosition(cc.v2(pos.x-20,pos.y+this.ship.height/2-20))
+               let bullet = null;
+        if (this.bulletPool.size() > 0) { // use size method to check if there're nodes available in the pool
+        bullet = this.bulletPool.get();
+        } else { // if not enough node in the pool, we call cc.instantiate to create node
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
+           bullet = cc.instantiate(this.shipBullet);
+        }
+        bullet.parent = this.node;
+        var pos = this.ship.getPosition();
+<<<<<<< HEAD
         bullet.setPosition(cc.v2(pos.x-20,pos.y+this.ship.height/2-20))
         // let bullet = null;
         // if (this.bulletPool.size() > 0) { // use size method to check if there're nodes available in the pool
@@ -158,6 +187,12 @@ export default class Ship extends cc.Component {
         //        let bullet = null;
         // if (this.bulletPool.size() > 0) { // use size method to check if there're nodes available in the pool
         // bullet = this.bulletPool.get();
+=======
+        bullet.setPosition(cc.v2(pos.x+7,pos.y+this.ship.height/2-10))
+               let bullet = null;
+        if (this.bulletPool.size() > 0) { // use size method to check if there're nodes available in the pool
+        bullet = this.bulletPool.get();
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
         } else { // if not enough node in the pool, we call cc.instantiate to create node
            bullet = cc.instantiate(this.shipBullet);
         }
@@ -174,7 +209,11 @@ export default class Ship extends cc.Component {
         if (this.bulletPool.size() > 0) { // use size method to check if there're nodes available in the pool
         bullet = this.bulletPool.get();
         } else { // if not enough node in the pool, we call cc.instantiate to create node
+<<<<<<< HEAD
            bullet = cc.instantiate(this.shipBullet1);
+=======
+           bullet = cc.instantiate(this.shipBullet);
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
         }
         bullet.parent = this.node;
         var pos = this.ship.getPosition();

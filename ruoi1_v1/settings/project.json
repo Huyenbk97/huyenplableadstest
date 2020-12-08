@@ -1,15 +1,27 @@
 {
   "group-list": [
+<<<<<<< HEAD
     "ship",
     "bullets",
     "enemy1",
     "enemy2",
     "enemy3",
     "shileds"
+=======
+    "bullet",
+    "enemy",
+    "enemy2",
+    "enemy3",
+    "New Group 6",
+    "Shield",
+    "Ship",
+    "1"
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
   ],
   "collision-matrix": [
     [
       false,
+<<<<<<< HEAD
       null,
       null,
       null,
@@ -25,10 +37,63 @@
     ],
     [
       false,
+=======
+      true,
+      true,
       true,
       false
     ],
     [
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
+      true,
+      false
+    ],
+    [
+<<<<<<< HEAD
+      false,
+      true,
+      false,
+=======
+      true,
+      false,
+      false
+    ],
+    [
+      true,
+      false,
+      false,
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
+      false
+    ],
+    [
+      false,
+<<<<<<< HEAD
+      true,
+=======
+      false,
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
+      false,
+      false,
+      false
+    ],
+    [
+<<<<<<< HEAD
+      true,
+      false,
+=======
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      false,
+      false,
+      false,
       false,
       true,
       false,
@@ -36,14 +101,10 @@
     ],
     [
       false,
-      true,
       false,
       false,
-      false
-    ],
-    [
-      true,
       false,
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
       false,
       false,
       false,
@@ -51,12 +112,40 @@
     ]
   ],
   "excluded-modules": [
+<<<<<<< HEAD
     "3D Physics/Builtin"
+=======
+    "Dynamic Atlas",
+    "DragonBones",
+    "Intersection",
+    "Mesh",
+    "MotionStreak",
+    "Physics",
+    "RichText",
+    "Slider",
+    "ScrollBar",
+    "ScrollView",
+    "Toggle",
+    "TiledMap",
+    "VideoPlayer",
+    "3D",
+    "3D Primitive",
+    "WechatSubContext",
+    "SwanSubContext",
+    "TypeScript Polyfill",
+    "3D Physics/cannon.js",
+    "3D Physics/Builtin",
+    "3D Particle"
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
   ],
   "preview-port": 7456,
   "design-resolution-width": 960,
   "design-resolution-height": 640,
+<<<<<<< HEAD
   "fit-width": false,
+=======
+  "fit-width": true,
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
   "fit-height": true,
   "use-project-simulator-setting": false,
   "simulator-orientation": false,
@@ -74,5 +163,10 @@
     "live": {
       "enable": false
     }
+<<<<<<< HEAD
   }
+=======
+  },
+  "last-module-event-record-time": 1606369982739
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
 }

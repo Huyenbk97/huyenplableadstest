@@ -19,8 +19,8 @@ export default class NewClass extends cc.Component {
     }
 
     update(dt) {
-        this.bg_1.y = this.bg_1.y - 2;
-        this.bg_2.y = this.bg_2.y - 2;
+        this.bg_1.y = this.bg_1.y - 4;
+        this.bg_2.y = this.bg_2.y - 4;
         if (this.bg_1.y<=-this.bg_1.width) {
             this.bg_1.y = this.bg_2.y + this.bg_1.width
         }

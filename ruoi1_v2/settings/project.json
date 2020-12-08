@@ -58,6 +58,7 @@
     ]
   ],
   "excluded-modules": [
+<<<<<<< HEAD
     "Collider",
     "Dynamic Atlas",
     "DragonBones",
@@ -78,6 +79,9 @@
     "3D Physics/Builtin",
     "3D Particle",
     "SafeArea"
+=======
+    "3D Physics/Builtin"
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
   ],
   "preview-port": 7456,
   "design-resolution-width": 960,

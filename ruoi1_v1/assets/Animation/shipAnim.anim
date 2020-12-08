@@ -5,7 +5,11 @@
   "_native": "",
   "_duration": 0.13333333333333333,
   "sample": 60,
+<<<<<<< HEAD
   "speed": 0.5,
+=======
+  "speed": 1,
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
   "wrapMode": 22,
   "curveData": {
     "comps": {
@@ -14,6 +18,7 @@
           {
             "frame": 0,
             "value": {
+<<<<<<< HEAD
               "__uuid__": "e9f1ed2c-d9c3-4c5f-81c8-281bb9380895"
             }
           },
@@ -51,12 +56,19 @@
             "frame": 0.1,
             "value": {
               "__uuid__": "e6b8a81a-e2fd-4aed-97f4-0d8dca5fba17"
+=======
+              "__uuid__": "c5993a11-507f-4d4e-8e39-d0c8b2ec6d93"
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
             }
           },
           {
             "frame": 0.11666666666666667,
             "value": {
+<<<<<<< HEAD
               "__uuid__": "b893ad1e-d774-4102-a3a4-3a3a64936b25"
+=======
+              "__uuid__": "6fe83da8-29e5-4d4d-bc3e-9f548219347c"
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
             }
           }
         ]
