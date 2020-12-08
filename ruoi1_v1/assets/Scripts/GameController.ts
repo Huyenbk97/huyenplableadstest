@@ -6,7 +6,11 @@ const { ccclass, property } = cc._decorator;
 export default class GameController extends cc.Component {
     static Instance: GameController = null;
     @property
+<<<<<<< HEAD
+    numOfEnemy: number =50;
+=======
     numOfEnemy: number =10;
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
     // @property(cc.Prefab)
     // bossPrefab: cc.Prefab = null;
     // @property(cc.Node)
@@ -37,6 +41,10 @@ export default class GameController extends cc.Component {
         GameController.Instance = this;
         //this.node.getComponent(Test).callTest();
         this.popup.on(cc.Node.EventType.TOUCH_MOVE, function (event) {
+<<<<<<< HEAD
+            this.Ship.getComponent(cc.Animation).play();
+=======
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
             this.moveHand.destroy();
             this.bulletPool = new cc.NodePool();
         }, this);

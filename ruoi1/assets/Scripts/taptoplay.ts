@@ -14,7 +14,7 @@ export default class NewClass extends cc.Component {
    touches: cc.Vec2[] = []
     // LIFE-CYCLE CALLBACKS:
      spawn(even){
-        this.node.destroy();
+        this.node.active=false;
      }
      onLoad () {
        var node = cc.find('Canvas/Ship');

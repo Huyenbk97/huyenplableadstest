@@ -137,7 +137,7 @@
     },
     "_enabled": true,
     "Cavas": null,
-    "bulletTime": 100,
+    "bulletTime": 400,
     "BulletSpeed": 500,
     "_id": ""
   },

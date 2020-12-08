@@ -18,7 +18,11 @@ height: number=100;
 
     onLoad () {
         var screen = cc.find("Canvas");
+<<<<<<< HEAD
+        this.node.setContentSize(screen.getContentSize().width * this.width / 100, screen.getContentSize().height * this.height / 100);
+=======
         this.node.setContentSize(screen.getContentSize().width * this.width / 100, screen.getContentSize().height * this.height / 100)  
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
     }
 
     start () {

@@ -53,20 +53,36 @@ export default class GameController extends cc.Component {
             this.bulletPool = new cc.NodePool();
             this.Ship.getComponent(cc.Animation).play();
         }, this);
+<<<<<<< HEAD
+        this.check();
+=======
         
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
         this.setTouch();
         //this.InitBullet();
         //this.createBullet();
         cc.audioEngine.playEffect(this.backgroundSound, false);
+<<<<<<< HEAD
+   
+        
+    }
+    start() {
+    }
+    check() {
+=======
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
         if (this.popup.active==false) {
             this.scheduleOnce(function() {
                 // Here `this` is referring to the component
                        this.showPopup();
             }, 10); 
         }
+<<<<<<< HEAD
+=======
         
     }
     start() {
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
     }
     setTouch() {
         this.Ship.on(cc.Node.EventType.TOUCH_MOVE, function (event) {
@@ -169,7 +185,14 @@ export default class GameController extends cc.Component {
     }
     clickPopup() {
         if(cc.sys.os==cc.sys.OS_ANDROID){
+<<<<<<< HEAD
+        mraid.open("https://play.google.com/store/apps/details?id=com.alien.shooter.galaxy.attack&hl=en_US&gl=US");}
+        else  mraid.open("https://apps.apple.com/us/app/galaxy-attack-alien-shooter/id1176011642");
+    }
+
+=======
         cc.sys.openURL("https://play.google.com/store/apps/details?id=com.alien.shooter.galaxy.attack&hl=en_US&gl=US");}
         else cc.sys.openURL("https://apps.apple.com/us/app/galaxy-attack-alien-shooter/id1176011642");
     }
+>>>>>>> 38382b420f12a3a1a6da0d320a9ed9f8bde97c9a
 }

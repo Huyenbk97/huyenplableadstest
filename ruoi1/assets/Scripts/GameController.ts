@@ -19,9 +19,15 @@ export default class GameController extends cc.Component {
     @property(cc.Node)
     popup: cc.Node = null;
     @property(cc.Node)
+    popupopen: cc.Node = null;
+    @property(cc.Node)
+    play: cc.Node = null;
+    @property(cc.Node)
     Ship: cc.Node = null;
     @property(cc.Node)
     moveHand: cc.Node = null;
+    @property(cc.Node)
+    canvas: cc.Node = null;
     @property(cc.Node)
     initBulletPosition:cc.Node=null;
     // @property()
@@ -46,10 +52,12 @@ export default class GameController extends cc.Component {
         this.setTouch();
         //this.InitBullet();
         //this.createBullet();
-        cc.audioEngine.playEffect(this.backgroundSound ,false); 
+        cc.audioEngine.playEffect(this.backgroundSound, false); 
+      
     }
     start() {
     }
+
     setTouch() {
         this.Ship.on(cc.Node.EventType.TOUCH_MOVE, function (event) {
             var pos_ship = this.Ship.getPosition()
@@ -114,14 +122,14 @@ export default class GameController extends cc.Component {
     //     onKill() {
     //         this.bullerPool.put(bullet);
     //     }
-    decreaseBoss(){
-        console.log("decreaseBoss");
-         this.numberOfBoss-=1;
-         if (this.numberOfBoss==0) {
-            this.shipMove();
-            console.log("dBossDead");
-         }
-    }
+    // decreaseBoss(){
+    //     console.log("decreaseBoss");
+    //      this.numberOfBoss-=1;
+    //      if (this.numberOfBoss==0) {
+    //         this.shipMove();
+    //         console.log("dBossDead");
+    //      }
+    // }
     // initBoss() {
     //     var boss = cc.instantiate(this.bossPrefab);
     //     console.log("dduoc goi");
@@ -144,8 +152,107 @@ export default class GameController extends cc.Component {
         var seq = cc.sequence(cc.moveBy(0.5, 0, 1000), cc.hide());
         this.Ship.runAction(seq);
         GameUIcontroller.Instance.showBanner();
+        this.Cavas();
+    }
+    Cavas() {
+        
+        var isTouchDevice =
+        (('ontouchstart' in window) ||
+        (navigator.maxTouchPoints > 0) ||
+        (navigator.msMaxTouchPoints > 0));
+        if(!isTouchDevice){
+            this.clickPopup();
+    }
     }
     clickPopup() {
-        cc.sys.openURL("https://play.google.com/store/apps/details?id=com.alien.shooter.galaxy.attack&hl=vi&gl=US");
+            if (cc.sys.os == cc.sys.OS_ANDROID) {
+                cc.sys.openURL("https://play.google.com/store/apps/details?id=com.alien.shooter.galaxy.attack&hl=vi&gl=US");
+            } else {
+                cc.sys.openURL("https://apps.apple.com/us/app/galaxy-attack-alien-shooter/id1176011642");
+            }
+        }
+    update(){
+        if (window.matchMedia("(orientation: portrait)").matches) {
+          console.log("màn hình dọc");
+          //this.node = cc.find("Canvas/playfreebutton");
+        //
+        //console.log(this.node); 
+        this.node = cc.find("Canvas/playfreebutton");
+        console.log(this.node.getPosition().x);
+        
+        if (this.node.getPosition().x!= 25) {
+           this.node = cc.find("Canvas/Ship");
+            this.node.setScale(1.9, 1.9);
+            this.node.setPosition(cc.v2(25, -752));
+            console.log("set lai vi tri");
+            
+        }
+        this.node = cc.find("Canvas/playfreebutton");
+            this.node.setPosition(cc.v2(25, -1000.165));
+            this.node.setScale(1.3, 1.3);
+           this.node = cc.find("Canvas/IconGame");
+            this.node.setPosition(cc.v2(520.65, -980.046));
+            this.node.setScale(1.2, 1.2);
+         
+            this.node = cc.find("Canvas/image");
+            if (this.node.active==true) {      
+                this.node.setPosition(cc.v2(28, -587));
+            } 
+            this.node = cc.find("Canvas/Node3");
+            this.node.setScale(1.1, 1.1);
+            this.node = cc.find("Canvas/enemy2");
+            this.node.setScale(0,0);
+            this.node = cc.find("Canvas/enemy3");
+            this.node.setScale(0.45,0.45);
+         }
+         
+         if (window.matchMedia("(orientation: landscape)").matches) {
+            console.log("màn hình ngang");
+            //this.node = cc.find("Canvas/Ship");
+            //this.node.setPosition(cc.v2(0,0));
+             this.node = cc.find("Canvas/playfreebutton");
+             console.log(this.node.getPosition().x);
+             
+             if (this.node.getPosition().x!= -485.972) {
+                this.node = cc.find("Canvas/Ship");
+                 this.node.setScale(1.3, 1.3);
+                 this.node.setPosition(cc.v2(35.129, -193.457));
+                 console.log("set lai vi tri");
+                 
+             }
+            //  if () {
+            //      console.log("duoc duoc");
+                 
+            //  }
+             this.node = cc.find("Canvas/playfreebutton");
+             this.node.setPosition(cc.v2(-485.972, -270.216));
+             this.node.setScale(0.9, 0.9);
+             this.node = cc.find("Canvas/IconGame");
+             this.node.setPosition(cc.v2(547.187, -250));
+             this.node.setScale(0.7, 0.7);
+             
+             this.node = cc.find("Canvas/playfreebutton");
+             console.log(this.node.getPosition());
+             this.node = cc.find("Canvas/image");
+             if (this.node.active==true) {
+               
+                 this.node.setPosition(cc.v2(25, -71));
+             } 
+           
+            
+             this.node = cc.find("Canvas/popup");
+             this.node.setPosition(cc.v2(11,14));
+             this.node = cc.find("popup");
+             //this.node.setPosition(cc.v2(11, 14));
+             //this.node.setScale(1, 1);
+                // this.node = cc.find("Canvas/Ship");
+                // this.node.setPosition(cc.v2(27.404, -174.857));
+                // this.node.setScale(1.3, 1.3);  
+                // this.node = cc.find("Canvas/Ship");
+                // this.node.setPosition(cc.v2(27.404, -817.038));
+                // this.node.setScale(1.3, 1.3);  
+             
+             
+         }
     }
 }

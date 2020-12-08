@@ -38,12 +38,16 @@
     ]
   ],
   "excluded-modules": [
-    "3D Physics/Builtin"
+    "3D",
+    "3D Primitive",
+    "3D Physics/cannon.js",
+    "3D Physics/Builtin",
+    "3D Particle"
   ],
   "preview-port": 7456,
   "design-resolution-width": 960,
   "design-resolution-height": 640,
-  "fit-width": false,
+  "fit-width": true,
   "fit-height": true,
   "use-project-simulator-setting": false,
   "simulator-orientation": false,
@@ -62,5 +66,5 @@
       "enable": false
     }
   },
-  "last-module-event-record-time": 1606369982739
+  "last-module-event-record-time": 1607400288284
 }

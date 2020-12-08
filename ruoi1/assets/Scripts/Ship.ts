@@ -1,6 +1,7 @@
 import bullet from "./Bullet";
-
-const {ccclass, property} = cc._decorator;
+import GameUIcontroller from "./GameUIcontroller";
+const { ccclass, property } = cc._decorator;
+import Gamecontroller from "./Gamecontroller";
 @ccclass
 export default class Ship extends cc.Component {
     static Instance: Ship = null;
@@ -18,6 +19,8 @@ export default class Ship extends cc.Component {
     shipBullet: cc.Node = null;
     @property(cc.NodePool)
     bulletPool: cc.NodePool = null;
+    @property(cc.Node)
+    popup: cc.Node = null;
     @property({
         type:cc.AudioClip
     })
@@ -47,23 +50,37 @@ isGamestart:boolean=false;
         this.bulletTime = 0;
         this.ship.on(cc.Node.EventType.TOUCH_MOVE, function (event) {
             this.bulletPool = new cc.NodePool();
+            this.check();
           }, this);
        
         this.node.parent.on('touchmove',this.startShotting,this);
-        cc.audioEngine.playEffect(this.backgroundSound ,false); 
+        cc.audioEngine.playEffect(this.backgroundSound, false); 
+       
     }
     start () {
     }
-    createBullet() {
-        let bullet = null;
-        if (this.bulletPool.size() > 0) { // use size method to check if there're nodes available in the pool
-        bullet = this.bulletPool.get();
-        } else { // if not enough node in the pool, we call cc.instantiate to create node
-           bullet = cc.instantiate(this.shipBullet);
+    check() {
+        if (this.popup.active==false) {
+            this.scheduleOnce(function() {
+                // Here `this` is referring to the component
+                GameUIcontroller.Instance.showBanner();
+            }, 12); 
+            Gamecontroller.Instance.Cavas();
         }
-        bullet.parent = this.node;
-        var pos = this.ship.getPosition();
-        bullet.setPosition(cc.v2(pos.x,pos.y+this.ship.height-30))
+    }
+    createBullet() {
+        if (this.popup.active == false) {    
+            let bullet = null;
+            if (this.bulletPool.size() > 0) { // use size method to check if there're nodes available in the pool
+                bullet = this.bulletPool.get();
+            } else { // if not enough node in the pool, we call cc.instantiate to create node
+                bullet = cc.instantiate(this.shipBullet);
+            }
+            bullet.parent = this.node;
+            var pos = this.ship.getPosition();
+            bullet.setPosition(cc.v2(pos.x, pos.y + this.ship.height - 30))
+            cc.audioEngine.playEffect(this.shoot, false);
+        }
     }
     onKill() {
         this.bullerPool.put(bullet);
